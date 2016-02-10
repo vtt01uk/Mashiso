@@ -1,0 +1,6 @@
+== Mashiso
+Delicious Korean recipes 
+---
+A ruby on rails blog that promotes healthy eating by exploring a range of Korean recipes.
+---
+<tt></tt>
