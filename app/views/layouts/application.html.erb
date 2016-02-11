@@ -7,25 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header class="navbar navbar-default nav-bar-fixed-top">
-	<div class="container">
-		<%= link_to "Mashiso", "/path", id:"logo" %>
-		<div class="nav_item">
-			<%= link_to "link", "/path"%>
-		</div>
-		<div class="nav_item">
-			<%= link_to "link", "/path"%>
-		</div>
-		<div class="nav_item">
-			<%= link_to "link", "/path"%>
-		</div>
-	</div>
-</header>
+	<%= render 'layouts/navigation' %>
 <div class="container">
 	<%= yield %>
-	<div class="footer">
-		<p>&copy; Mashiso 2016</p>
-	</div>
+	<%= render 'layouts/footer' %>
 </div>
 </body>
 </html>
