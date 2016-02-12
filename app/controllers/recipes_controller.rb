@@ -12,6 +12,10 @@ class RecipesController < ApplicationController
 	end
 	
 	def show
+		#use gemfile
+		#binding.pry
+		#search by id
+		@recipe = Recipe.find(params[:id])
 	end
 	
 end
