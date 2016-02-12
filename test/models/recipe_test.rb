@@ -4,13 +4,19 @@ class RecipeTest < ActiveSupport::TestCase
 	
 	#create a method
 	def setup
+		@chef = Chef.create(chefname: "Jamie", email: "jamie@oliver.com")
 		#create an instance variable throughout all models
-		@recipe = Recipe.new(name:"Bulgogi", summary:"One of South Korea's most famous dishes", description: "Seasoned beef in a savory sauce with mixed vegetables makes a delicious choice any day of the week.")
+		@recipe = @chef.recipes.build(name:"Bulgogi", summary:"One of South Korea's most famous dishes", description: "Seasoned beef in a savory sauce with mixed vegetables makes a delicious choice any day of the week.")
 	end
 	
 	test "recipe should be valid" do
 			#From http://guides.rubyonrails.org/testing.html
-			assert_not @recipe.valid?
+			assert @recipe.valid?
+	end
+	
+	test "chef_id should be present" do
+		@recipe.chef_id = nil
+		assert_not @recipe.valid?
 	end
 	
 	test "name should be present" do

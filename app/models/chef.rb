@@ -1,5 +1,9 @@
 class Chef < ActiveRecord::Base
 	
+	#define association
+	has_many :recipes
+	
+	
 	#before-save callback; before saving emails, convert them to lowercase
 	before_save { self.email = email.downcase }
 	
