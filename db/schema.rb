@@ -39,10 +39,12 @@ ActiveRecord::Schema.define(version: 20160211153419) do
   add_index "comments", ["article_id"], name: "index_comments_on_article_id"
 
   create_table "recipes", force: :cascade do |t|
-    t.string  "name"
-    t.text    "summary"
-    t.text    "description"
-    t.integer "chef_id"
+    t.string   "name"
+    t.text     "summary"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "chef_id"
   end
 
   create_table "users", force: :cascade do |t|
