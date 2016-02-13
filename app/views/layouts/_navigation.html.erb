@@ -1,14 +1,17 @@
 <header class="navbar navbar-default nav-bar-fixed-top">
 	<div class="container">
 		<%= link_to "Mashiso", root_path, id:"logo" %>
+		
 		<div class="nav_item">
-			<%= link_to "link", "/path"%>
+			<%= link_to "About", "/path"%>
 		</div>
+		
 		<div class="nav_item">
-			<%= link_to "link", "/path"%>
+			<%= link_to "New recipe", new_recipe_path%>
 		</div>
+		
 		<div class="nav_item">
-			<%= link_to "link", "/path"%>
+			<%= link_to "View recipes", recipes_path%>
 		</div>
 	</div>
 </header>

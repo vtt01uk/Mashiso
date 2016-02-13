@@ -27,7 +27,7 @@ class RecipeTest < ActiveSupport::TestCase
 	end
 	
 	test "name length should not be too long" do
-		@recipe.name = "a" * 16
+		@recipe.name = "a" * 26
 		assert_not @recipe.valid?
 	end
 	
