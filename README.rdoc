@@ -1,4 +1,4 @@
-== Mashiso 맛있어
+== Mashiso 맛있어 :ramen:
 Delicious Korean recipes 
 ---
 A ruby on rails blog that promotes healthy eating by exploring a range of Korean recipes.
@@ -13,30 +13,30 @@ Testing specs for recipes model:
 name: string
 summary: text
 description: text
-<tt>name must be present</tt>
+~~<tt>name must be present</tt>~~
 
-<tt>name must be between 5 characters and less than 15 characters</tt>
+~~<tt>name must be between 5 characters and less than 15 characters</tt>~~
 
-<tt>summary must be present</tt>
+~~<tt>summary must be present</tt>~~
 
-<tt>summary must be between 5 characters and less than 50 characters</tt>
+~~<tt>summary must be between 5 characters and less than 50 characters</tt>~~
 
-<tt>description must be present</tt>
+~~<tt>description must be present</tt>~~
 
-<tt>description must be between 10 and 500 characters</tt>
+~~<tt>description must be between 10 and 500 characters</tt>~~
 
-<tt>(For association, chef_id must be present)</tt>
+~~<tt>(For association, chef_id must be present)</tt>~~
 ---
 Testing specs for chefs model:
 chefname: string
 email: string
 
-<tt>chefname must be present</tt>
+~~<tt>chefname must be present</tt>~~
 
-<tt>chefname must be between 3 characters and less than 40 characters</tt>
+~~<tt>chefname must be between 3 characters and less than 40 characters</tt>~~
 
-<tt>email must be present</tt>
+~~<tt>email must be present</tt>~~
 
-<tt>email must be unique(will be used for logins)</tt>
+~~<tt>email must be unique(will be used for logins)</tt>~~
 
-<tt>email must be valid</tt>
+~~<tt>email must be valid</tt>~~
