@@ -3,7 +3,9 @@ class RecipesController < ApplicationController
 	def index
 		#goes to db, graps all recipes & stores in @recipes object
 		#show trending recipes according to likes
-		@recipes = Recipe.all.sort_by{ |likes| likes.thumbs_up_total }.reverse
+		@recipes = Recipe.paginate(page: params[:page], per_page: 5)
+		
+#		@recipes = Recipe.all.sort_by{ |likes| likes.thumbs_up_total }.reverse
 	end
 	
 	def new
