@@ -57,7 +57,7 @@ class RecipeTest < ActiveSupport::TestCase
 	end
 
 	test "description should not be too long" do
-		@recipe.description = "a" * 1001
+		@recipe.description = "a" * 2001
 		assert_not @recipe.valid?
 	end
 
