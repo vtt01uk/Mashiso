@@ -2,6 +2,7 @@ class Chef < ActiveRecord::Base
 	
 	#define association
 	has_many :recipes
+	has_many :likes
 	
 	
 	#before-save callback; before saving emails, convert them to lowercase
