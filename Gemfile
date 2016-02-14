@@ -33,8 +33,9 @@ gem 'mini_magick', '~> 4.4.0'
 gem 'will_paginate', '~> 3.1.0'
 #Hooks into will_paginate to format the html to match Twitter Bootstrap styling.
 gem 'bootstrap-will_paginate', '~>0.0.10'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+# Use ActiveModel has_secure_password 
+# https://rubygems.org/gems/bcrypt
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

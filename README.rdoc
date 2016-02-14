@@ -13,30 +13,30 @@ Testing specs for recipes model:
 name: string
 summary: text
 description: text
-~~<tt>name must be present</tt>~~
+~~name must be present~~
 
-~~<tt>name must be between 5 characters and less than 15 characters</tt>~~
+~~name must be between 5 characters and less than 15 characters~~
 
-~~<tt>summary must be present</tt>~~
+~~summary must be present~~
 
-~~<tt>summary must be between 5 characters and less than 50 characters</tt>~~
+~~summary must be between 5 characters and less than 50 characters~~
 
-~~<tt>description must be present</tt>~~
+~~description must be present~~
 
-~~<tt>description must be between 10 and 500 characters</tt>~~
+~~description must be between 10 and 500 characters~~
 
-~~<tt>(For association, chef_id must be present)</tt>~~
+~~(For association, chef_id must be present)~~
 ---
 Testing specs for chefs model:
 chefname: string
 email: string
 
-~~<tt>chefname must be present</tt>~~
+~~chefname must be present~~
 
-~~<tt>chefname must be between 3 characters and less than 40 characters</tt>~~
+~~chefname must be between 3 characters and less than 40 characters~~
 
-~~<tt>email must be present</tt>~~
+~~email must be present~~
 
-~~<tt>email must be unique(will be used for logins)</tt>~~
+~~email must be unique(will be used for logins)~~
 
-~~<tt>email must be valid</tt>~~
+~~email must be valid~~
