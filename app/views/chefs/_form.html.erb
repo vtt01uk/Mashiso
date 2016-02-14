@@ -5,7 +5,7 @@
 	<div class="well col-md-8-offset-2">
 		<!--Allow for file upload-->
 		<%= form_for @chef do |f| %>
-		<%= f.label :chefname %>
+		<%= f.label :chef_name %>
 		<%= f.text_field :chefname %>
 		
 		<%= f.label :email %>
@@ -15,7 +15,7 @@
 		<%= f.password_field :password %>
 		
 		<!--Ruby boolean; is this a new record, yes or no?-->
-		<%= f.submit(@chef.new_record? ? 'Register' : 'Edit Profile', class:"btn btn-success") %>
+		<%= f.submit(@chef.new_record? ? 'Register' : 'Edit Profile', class:"btn btn-md btn-success") %>
 		<%end %>
 	</div>
 </div>

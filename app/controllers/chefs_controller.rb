@@ -17,10 +17,19 @@ class ChefsController < ApplicationController
 	end
 	
 	def edit
+		@chef = Chef.find(params[:id])
 	end
 	
 	#will handle the the edit action
 	def update
+#		binding.pry
+		@chef = Chef.find(params[:id])
+		if @chef.update(chef_params)
+			flash[:success] = "Your profile has been updated successfully"
+			redirect_to recipes_path #show chef's page!
+		else
+			render 'edit'
+		end
 	end
 	
 	
