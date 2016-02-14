@@ -43,9 +43,14 @@ class RecipesController < ApplicationController
 #		binding.pry
 		@recipe = Recipe.find(params[:id])
 		# like is the key, params[:like] is the value: #chef is hard coded for now!
-		Like.create(like: params[:like], chef: Chef.first, recipe: @recipe)
-		flash[:success] = "Your selection was successful"
-	redirect_to :back #send the user back 
+		like = Like.create(like: params[:like], chef: Chef.first, recipe: @recipe)
+		if like.valid?
+			flash[:success] = "Your selection was successful"
+			redirect_to :back #send the user back 
+		else
+			flash[:danger] = "You can only like/dislike a recipe once"
+			redirect_to :back
+		end
 	end
 	
 	def show
