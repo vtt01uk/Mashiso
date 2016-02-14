@@ -2,7 +2,8 @@ class RecipesController < ApplicationController
 	#index action 
 	def index
 		#goes to db, graps all recipes & stores in @recipes object
-		@recipes = Recipe.all
+		#show trending recipes according to likes
+		@recipes = Recipe.all.sort_by{ |likes| likes.thumbs_up_total }.reverse
 	end
 	
 	def new
