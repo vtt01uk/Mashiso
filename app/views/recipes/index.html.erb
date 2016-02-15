@@ -9,7 +9,7 @@
 			<section class="chef_info center">
 			
 				<!--Add gravatar image-->
-				<%= gravatar_for recipe.chef, size: 100 %>
+				<%= link_to gravatar_for(recipe.chef, size: 100), chef_path(recipe.chef)%>
 				<h5>Chef name: <%= recipe.chef.chefname %></h5>	
 			</section>
 		</div>
