@@ -6,12 +6,25 @@
 			<%= link_to "About", "/path"%>
 		</div>
 		
-		<div class="nav_item">
-			<%= link_to "New recipe", new_recipe_path%>
-		</div>
+		<% if logged_in? %>
+			<div class="nav_item">
+				<%= link_to "Logout", logout_path%>
+			</div>
+
+			<div class="nav_item">
+				<%= link_to "New recipe", new_recipe_path%>
+			</div>
+
+			<% else %>
+					<div class="nav_item">
+				<%= link_to "Log in", login_path%>
+			</div>
+		<% end %>
 		
 		<div class="nav_item">
 			<%= link_to "View recipes", recipes_path%>
 		</div>
+		
+
 	</div>
 </header>
